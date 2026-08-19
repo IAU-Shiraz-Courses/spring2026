@@ -1,222 +1,139 @@
 /**
- * Site header
+ * Site header — Cayman-style hero band
+ * Background gradient: linear-gradient(120deg, #155799 0%, #159957 100%)
  */
 .site-header {
-    border-top: 0px solid $grey-color-dark;
-	border-bottom: 6px solid $clemson-orange;
-    min-height: 56px;
-    background-color: $clemson-purple;
-    // Positioning context for the mobile navigation icon
+    border-bottom: 6px solid $accent-color;
+    background: linear-gradient(120deg, #155799 0%, #159957 100%);
     position: relative;
+    color: $header-text-color;
 }
 
 .header-texture {
-    opacity: $header-background-opacity;
-    filter: invert($header-background-invert);
+    display: none; /* legacy texture no longer used */
 }
 
-.site-title, .site-title a {
-    font-size: 26px;
-/* 		margin-top: 15px;
-    line-height: 40px; */
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-    font-weight: 500;
-		font-family: 'Titillium Web', sans-serif;
-    color: $header-text-color;
-    &,
-    &:visited {
-        color: $header-text-color;
-    }
-    &,
-    &:hover {
-	text-decoration: none;
-}
-}
-
+/* ── Hero content ─────────────────────────────────────────── */
 .site-header .wrapper {
-	padding-top: 20px;
-	position: relative;
+    position: relative;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center;
 }
 
-.site-nav ul li a {
-	color: $header-text-color;
+.hero {
+    padding: 2rem 1rem 1rem 1rem;
 }
 
-.site-nav ul {
-
-	text-align: right;
-	float: right;
-	padding-top: 9px;
-	font-size: 85%;
-	letter-spacing: 1px;
-	line-height: 1em;
-	font-weight: 600;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	text-transform: uppercase;
-		font-family: 'Titillium Web', sans-serif;
-
+.hero-logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 12px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.site-nav .menu > li {
-	border-bottom: 3px solid transparent;
-	display: inline-block;
-	height: 23px;
-	line-height: normal;
-	margin: 12px 0 0 20px;
-	padding: 0 0 2px 0;
-	position: relative;
-	vertical-align: top;
-}
+.hero-title {
+    margin: 0 0 6px 0;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: $header-text-color;
 
-.site-nav a {
-	display: block;
+    a {
         color: $header-text-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            opacity: 0.95;
+        }
+    }
+
+    @include media-query($on-palm) {
+        font-size: 1.9rem;
+    }
 }
 
-/* Sub Menu */
+.hero-subtitle {
+    margin: 0 auto;
+    max-width: 44rem;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: $header-text-color;
+    opacity: 0.75;
+    text-transform: none;
+    letter-spacing: 0.01em;
 
-.site-nav .sub-menu a {
-	display: block;
-	font-weight: normal;
-	height: auto;
-	letter-spacing: 0;
-	line-height: 1.2em;
-	padding: 4px 10px;
-color: $title-color;
-
+    @include media-query($on-palm) {
+        font-size: 0.95rem;
+        padding: 0 8px;
+    }
 }
 
-.site-nav .sub-menu a:hover {
-	color: $clemson-purple;
-}
-.site-nav  .sub-menu {
-	background: #ffffff;
-	border-color: $clemson-purple;
-	min-width: 265px;
-
-	z-index:2147483647;
-}
-.site-nav .sub-menu li.current-menu-item > a {
-	border-left-color: $clemson-purple;
-	border-right-color: $clemson-purple;
-	border-right: 0px;
-
-}
-
-
-.sub-menu {
-	border: 3px solid transparent;
-	border-top: 0;
-	/* bg and border colors set in header */
-	box-shadow: 0 2px 2px rgba(0,0,0,0.4);
-	-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.4);
-	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.4);
-	display: none;
-	right: -10px;
-	padding: 4px 0 3px 0;
-	position: absolute;
-	text-align: left;
-	text-transform: none;
-	top: 28px;
-	min-width: 265px;
-
-z-index:999;
-	font-family: Helvetica, Arial, Verdana, sans-serif;
-
-}
-
-.sub-menu li {
-	border-bottom: 0;
-	display: block;
-	height: auto;
-	margin: 3px 0;
-	padding: 0;
-	text-align: left;
-}
-
-.site-nav li:hover > .sub-menu {
-	display: block;
-}
-
-
-
-.site-nav h1 {
-	position: absolute;
-	left: -999em;
-}
-
-
+/* ── Navigation bar ───────────────────────────────────────── */
 .site-nav {
-    float: right;
-    line-height: 40px;
-
+    margin-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    padding-top: 0.75rem;
 
     .menu-icon {
         display: none;
     }
 
-    .page-link {
-        color: $header-text-color;
-    background: $clemson-purple;
-        line-height: $base-line-height;
+    ul.menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem 1.5rem;
+    }
 
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
+    .menu-item {
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .menu-item a.page-link {
+        display: inline-block;
+        padding: 0.3rem 0.2rem;
+        color: $header-text-color;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 0.98rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        transition: border-color 0.18s ease, opacity 0.18s ease;
+
+        i {
+            margin-right: 0.35em;
+        }
+
+        &:hover {
+            border-bottom-color: rgba(255, 255, 255, 0.9);
+            opacity: 0.92;
+            text-decoration: none;
         }
     }
 
-
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
+    /* Active page */
+    .menu-item.current a.page-link {
+        border-bottom-color: $header-text-color;
+        background-color: rgba(255, 255, 255, 0.14);
+        border-radius: 4px 4px 0 0;
     }
 }
 
+/* Legacy selectors still used by old templates */
 .schoolname {
     color: $header-text-color;
 }
@@ -226,85 +143,22 @@ z-index:999;
     opacity: 0.9;
 }
 
-/* ===========================================
-   FINAL REFINEMENT: BIGGER LOGO, TIGHTER FOOTER
-   =========================================== */
-@media (min-width: 900px) {
+/* Tighten hero padding on small screens */
+@media (max-width: 768px) {
+    .hero {
+        padding: 1.25rem 0.5rem 0.75rem 0.5rem;
+    }
 
-  .site-header {
-    /* min-height را حذف کردم تا ارتفاع خودکار تنظیم شود */
-    display: block;
-    /* پدینگ بالا 25px و پدینگ پایین فقط 15px */
-    /* این باعث می‌شود هدر سریعاً زیر آیکون‌ها تمام شود */
-    padding: 25px 0 15px 0;
-  }
+    .hero-logo {
+        width: 68px;
+        height: 68px;
+    }
 
-  .site-header .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 40px;
-    position: relative;
-  }
+    .site-nav ul.menu {
+        gap: 0.2rem 0.9rem;
+    }
 
-  /* --- بخش لوگو و عنوان --- */
-  .site-header .wrapper > table {
-    float: none !important;
-    /* فاصله بین بخش بالا و منوی پایین را کمی کمتر کردم */
-    margin-bottom: 20px;
-    border-collapse: collapse;
-  }
-
-  /* تغییر 1: بزرگ‌تر کردن لوگو */
-  .site-header .wrapper > table img {
-    /* ارتفاع را از 95px به 115px افزایش دادم */
-    max-height: 115px;
-    width: auto;
-    display: block;
-    /* اگر نیاز بود لوگو کمی پایین‌تر بیاید، margin-top بدهید */
-    /* margin-top: 10px; */
-  }
-
-  /* --- بخش منو --- */
-  .site-nav {
-    position: static !important;
-    transform: none !important;
-    margin-top: 0;
-    border-top: none !important;
-    padding-top: 0;
-    width: auto;
-    /* اطمینان از اینکه خود منو فاصله اضافی در پایین ایجاد نمی‌کند */
-    margin-bottom: 0;
-  }
-
-  .site-nav ul {
-    display: flex !important;
-    /* فاصله آیتم‌ها را کمی تنظیم کردم تا زیباتر شود */
-    gap: 40px;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none;
-    align-items: center; /* تراز عمودی آیکون و متن */
-  }
-
-  .site-nav .menu > li {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .site-nav a {
-    font-size: 16px; /* سایز فونت کمی متعادل‌تر */
-    font-weight: 700; /* ضخامت بیشتر شبیه الگو */
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #ffffff; /* رنگ سفید برای متن منو */
-    letter-spacing: 0.5px;
-  }
-
-  /* استایل آیکون‌های داخل منو */
-  .site-nav a i, .site-nav a svg {
-    font-size: 18px; /* سایز آیکون‌ها */
-  }
+    .site-nav .menu-item a.page-link {
+        font-size: 0.88rem;
+    }
 }

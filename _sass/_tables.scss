@@ -1,0 +1,215 @@
+/* ============================================
+   Responsive data tables
+   Desktop (>=768px): a real <table> with a colored
+     header row (accent color, white text) and zebra
+     striping on rows.
+   Mobile (<768px): each <tr> collapses into a stacked
+     "card" (rounded corners, border, shadow, spacing);
+     each <td> becomes its own block prefixed with the
+     column label carried in its data-label attribute.
+   ============================================ */
+
+.data-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 ($spacing-unit / 2) 0;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    thead th {
+        background: $primary-color;
+        color: #ffffff;
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 600;
+        font-size: 0.92em;
+        letter-spacing: 0.03em;
+        text-align: left;
+        padding: 12px 14px;
+        border: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.22);
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    tbody tr {
+        border-bottom: 1px solid lighten($grey-color, 45%);
+        transition: background-color 0.15s ease;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        /* Zebra striping */
+        &:nth-child(even) {
+            background-color: #f2f8f5;
+        }
+
+        /* Hover / tap highlight */
+        &:hover {
+            background-color: #eef3ff;
+        }
+
+        td {
+            padding: 12px 14px;
+            vertical-align: top;
+            border: none;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+    }
+
+    a {
+        font-weight: 500;
+    }
+
+    /* Small labeled pill links (materials / downloads) */
+    .material-links a {
+        display: inline-block;
+        margin: 2px 6px 2px 0;
+        padding: 3px 10px;
+        border: 1px solid lighten($accent-color, 45%);
+        border-radius: 20px;
+        background: lighten($accent-color, 62%);
+        color: darken($accent-color, 5%);
+        font-size: 0.85em;
+        white-space: nowrap;
+        transition: background-color 0.15s ease, color 0.15s ease;
+
+        &:hover {
+            background: $accent-color;
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+
+    /* Flagged (placeholder / assumed) rows */
+    tbody tr.flagged-row,
+    tbody tr.flagged-row:nth-child(even) {
+        background-color: #fff8e6;
+
+        &:hover {
+            background-color: #fff3d6;
+        }
+    }
+
+    /* Small "assumption" tag used inside flagged cells */
+    .flag-tag {
+        display: inline-block;
+        margin-left: 6px;
+        padding: 1px 8px;
+        border-radius: 10px;
+        background: #fff3cd;
+        border: 1px solid #ffc107;
+        color: #7a5b00;
+        font-size: 0.78em;
+        font-weight: 600;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+
+    /* ── Mobile: stacked cards ── */
+    @media screen and (max-width: 767px) {
+        box-shadow: none;
+        background: transparent;
+        border-radius: 0;
+
+        thead {
+            display: none;
+        }
+
+        tbody {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        tbody tr,
+        tbody tr.flagged-row {
+            display: block;
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid lighten($grey-color, 40%);
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            padding: 6px 2px;
+
+            &:nth-child(even) {
+                background: #ffffff;
+            }
+
+            &:hover {
+                background: #f4f8ff;
+            }
+
+            &.flagged-row,
+            &.flagged-row:nth-child(even) {
+                background: #fffaf0;
+                border-color: #f0d9a0;
+
+                &:hover {
+                    background: #fff3d6;
+                }
+            }
+        }
+
+        tbody td {
+            display: block;
+            width: 100%;
+            padding: 7px 12px;
+            border: none;
+            box-sizing: border-box;
+
+            /* Column label prefix, e.g. "Week: 1" */
+            &::before {
+                content: attr(data-label) ":";
+                display: block;
+                font-family: 'Titillium Web', sans-serif;
+                font-weight: 700;
+                font-size: 0.8em;
+                letter-spacing: 0.04em;
+                color: $accent-color;
+                margin-bottom: 2px;
+            }
+        }
+    }
+}
+
+/* ── Helpers used with .data-table ─────────────────────────── */
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.schedule-intro {
+    margin: 0 0 18px 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.schedule-legend {
+    margin-top: 16px;
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.placeholder-text {
+    color: #999;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Wide tables can scroll horizontally on desktop when needed */
+.data-table.schedule-table {
+    min-width: 640px;
+}
+
+@media screen and (max-width: 767px) {
+    .data-table.schedule-table {
+        min-width: 0;
+    }
+}

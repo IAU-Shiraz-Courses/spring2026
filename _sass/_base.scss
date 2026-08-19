@@ -112,6 +112,7 @@ h4,
 h5,
 h6 {
     font-weight: 200;
+    color: $title-color;
 }
 
 
@@ -124,11 +125,11 @@ a {
     text-decoration: none;
 
     &:visited {
-        /*    color: darken($brand-color, 15%); */
+        color: $brand-color;
     }
 
     &:hover {
-        color: $text-color;
+        color: $accent-color;
         text-decoration: underline;
     }
 }

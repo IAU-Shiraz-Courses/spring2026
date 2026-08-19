@@ -8,27 +8,203 @@ layout: default
 
 {{ content }}
 
-<div class="home" style="font-size: 0.8em;">
-    <ul class="responsive-table" style="margin-left: 0;">
-        <li class="table-header">
-            <div class="col col-1">Event</div>
-            <div class="col col-1-2">Date</div>
-            <div class="col col-2">Description</div>
-            <div class="col col-4">Course Material</div>
-        </li>
-        
-        {% assign all_assignment_dues = site.assignments | map: "due_event" %}
+<p class="schedule-intro">
+  A week-by-week roadmap for the course. Each row is one self-contained unit:
+  the session topic, the people leading it, and every downloadable resource
+  (slides, quiz, answer key, homework) published for that week.
+</p>
 
-        {% assign all_events = site.events | concat: site.lectures %}
-        {% assign all_events = all_events | concat: site.assignments %}
-        {% assign all_events = all_events | concat: all_assignment_dues %}
-        {% assign all_events_sorted = all_events | sort: 'date' %}
+<div class="table-scroll">
+<table class="data-table schedule-table">
+    <thead>
+        <tr>
+            <th data-label="Date">Date</th>
+            <th data-label="Session">Session Topic</th>
+            <th data-label="Instructor">Instructor / TA</th>
+            <th data-label="Materials">Materials</th>
+            <th data-label="Notes">Notes / Readings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ────────────────────────────────────────────────
+             WEEK 1 — Sorting
+             Assumption: exact session date unknown. Flagged.
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 1<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Sorting</td>
+            <td data-label="Instructor">Dr. Amin Eskandari</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 01 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 01 - Answers.pdf">🔑 Answer Key</a>
+            </td>
+            <td data-label="Notes">—</td>
+        </tr>
 
-        {% for event in all_events_sorted %}
-        <li class="table-row table-row-{{ event.type}}">
-            {% include schedule_row_{{ event.type }}.html event=event %}
-        </li>
-        {% endfor %}
+        <!-- ────────────────────────────────────────────────
+             WEEK 2 — Complexity Analysis
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 2<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Complexity Analysis of Algorithms</td>
+            <td data-label="Instructor">Dr. Amin Eskandari</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 02 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 02 - Answers.pdf">🔑 Answer Key</a>
+            </td>
+            <td data-label="Notes">—</td>
+        </tr>
 
-    </ul>
+        <!-- ────────────────────────────────────────────────
+             WEEK 2.5 — Complexity Analysis (extra)
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 2.5<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Complexity Analysis of Algorithms (supplementary practice)</td>
+            <td data-label="Instructor">TAs</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 2.5 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 2.5 - Answers.pdf">🔑 Answer Key</a>
+            </td>
+            <td data-label="Notes">—</td>
+        </tr>
+
+        <!-- ────────────────────────────────────────────────
+             WEEK 3 — Complexity, Data Structures, Trees
+             Quiz 1 is associated with this block of weeks.
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 3<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Complexity Analysis · Basic Data Structures · Tree Storage and Traversal</td>
+            <td data-label="Instructor">Dr. Amin Eskandari</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 03 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 03 - Answers.pdf">🔑 Answer Key</a>
+                <a href="/static_files/Quizzes/Quiz 01 - Questions.pdf">📝 Quiz 1</a>
+                <a href="/static_files/Quizzes/Quiz 01 - Answers.pdf">🔑 Quiz 1 Key</a>
+            </td>
+            <td data-label="Notes">Quiz 1 released April 13, 2026 · <a href="https://www.aparat.com/v/jnqh9a9?playlist=25298190">🎥 Video (Ch. 4 – Basic Data Structures)</a></td>
+        </tr>
+
+        <!-- ────────────────────────────────────────────────
+             WEEK 4 — Trees, BST, Trie, Heap
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 4<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Trees · BST · Trie · Heap</td>
+            <td data-label="Instructor">Dr. Amin Eskandari</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 04 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 04 - Answers.pdf">🔑 Answer Key</a>
+            </td>
+            <td data-label="Notes"><a href="https://www.aparat.com/v/dgen834?playlist=25298190">🎥 Video (Ch. 5 – Trees)</a></td>
+        </tr>
+
+        <!-- ────────────────────────────────────────────────
+             WEEK 5 — Sorting Advanced
+             Quiz 2 falls in this window.
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 5<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Sorting Advanced</td>
+            <td data-label="Instructor">Dr. Amin Eskandari</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 05 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 05 - Answers.pdf">🔑 Answer Key</a>
+                <a href="/static_files/Quizzes/Quiz 02 - Questions.pdf">📝 Quiz 2</a>
+                <a href="/static_files/Quizzes/Quiz 02 - Answers.pdf">🔑 Quiz 2 Key</a>
+            </td>
+            <td data-label="Notes">Quiz 2 released April 27, 2026</td>
+        </tr>
+
+        <!-- ────────────────────────────────────────────────
+             WEEK 6 — Disjoint Sets & Binary Search / KSelect
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 6<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Disjoint Sets · Binary Search and KSelect</td>
+            <td data-label="Instructor">Dr. Amin Eskandari</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 06 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 06 - Answers.pdf">🔑 Answer Key</a>
+            </td>
+            <td data-label="Notes"><a href="https://www.aparat.com/v/hgan76v?playlist=25298190">🎥 Video (Ch. 6–8 – Sorting Advanced, Disjoint Sets, Binary Search &amp; KSelect)</a></td>
+        </tr>
+
+        <!-- ────────────────────────────────────────────────
+             WEEK 7 — Hashing
+             Quiz 3 falls in this window.
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 7<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Hashing</td>
+            <td data-label="Instructor">Dr. Amin Eskandari</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 07 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 07 - Answers.pdf">🔑 Answer Key</a>
+                <a href="/static_files/Quizzes/Quiz 03 - Questions.pdf">📝 Quiz 3</a>
+                <a href="/static_files/Quizzes/Quiz 03 - Answers.pdf">🔑 Quiz 3 Key</a>
+            </td>
+            <td data-label="Notes">Quiz 3 released May 11, 2026 · <a href="https://www.aparat.com/v/mkpc63n?playlist=25298190">🎥 Video (Ch. 9 – Hashing)</a></td>
+        </tr>
+
+        <!-- ────────────────────────────────────────────────
+             WEEK 8 — Hashing & Graph Algorithms
+             Quiz 4 falls in this window.
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 8<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Hashing · Graph Algorithms</td>
+            <td data-label="Instructor">Dr. Amin Eskandari</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 08 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 08 - Answers.pdf">🔑 Answer Key</a>
+                <a href="/static_files/Quizzes/Quiz 04 - Questions.pdf">📝 Quiz 4</a>
+                <a href="/static_files/Quizzes/Quiz 04 - Answers.pdf">🔑 Quiz 4 Key</a>
+            </td>
+            <td data-label="Notes">Quiz 4 released May 25, 2026 · <a href="https://www.aparat.com/v/qoh88pi?playlist=25298190">🎥 Video (Ch. 10 – Graph Algorithms)</a></td>
+        </tr>
+
+        <!-- ────────────────────────────────────────────────
+             WEEK 9 — Graphs, Advanced Data Structures, Balanced BSTs
+             Quiz 5 (final) falls here.
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Week 9<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Graph Algorithms · Advanced Data Structures · Balanced BSTs</td>
+            <td data-label="Instructor">Dr. Amin Eskandari</td>
+            <td data-label="Materials" class="material-links">
+                <a href="/static_files/exercises/Week 09 - Questions.pdf">📄 Homework</a>
+                <a href="/static_files/exercises/Week 09 - Answers.pdf">🔑 Answer Key</a>
+                <a href="/static_files/Quizzes/Quiz 05 - Questions.pdf">📝 Quiz 5</a>
+                <a href="/static_files/Quizzes/Quiz 05 - Answers.pdf">🔑 Quiz 5 Key</a>
+            </td>
+            <td data-label="Notes">Quiz 5 released June 1, 2026 · <a href="https://www.aparat.com/v/krb1kh4?playlist=25298190">🎥 Video (Ch. 11–12 – Advanced Data Structures, Balanced BSTs)</a></td>
+        </tr>
+
+        <!-- ────────────────────────────────────────────────
+             SUPPLEMENTARY — Maximum Flow
+             The brief referenced supplementary Maximum Flow
+             material, but none exists in this repository yet.
+             Row is included as a clearly-labelled placeholder.
+             ──────────────────────────────────────────────── -->
+        <tr class="flagged-row">
+            <td data-label="Date">Supplementary<span class="flag-tag">assumed</span></td>
+            <td data-label="Session">Maximum Flow</td>
+            <td data-label="Instructor">TAs</td>
+            <td data-label="Materials" class="material-links">
+                <span class="placeholder-text">No materials published yet</span>
+            </td>
+            <td data-label="Notes"><span class="placeholder-text">Supplementary topic — not part of the weekly exercise schedule</span></td>
+        </tr>
+    </tbody>
+</table>
 </div>
+
+<p class="schedule-legend">
+  <strong>Legend:</strong>
+  📄 Homework sheet · 📝 Quiz · 🔑 Answer key · 🎥 Recorded lecture video.
+  Rows tagged <span class="flag-tag">assumed</span> use "Week N" placeholders where an exact
+  session date has not been published on the site; they should be updated with real dates.
+</p>
+

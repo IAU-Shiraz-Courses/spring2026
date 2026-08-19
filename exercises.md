@@ -285,6 +285,119 @@ permalink: /exercises/
   <p>Download the weekly exercise sheets and their solution keys below. Make sure to attempt the problems before checking the solutions!</p>
 </div>
 
+<div class="table-scroll">
+<table class="data-table">
+  <thead>
+    <tr>
+      <th data-label="Week">Week</th>
+      <th data-label="Topic">Topic</th>
+      <th data-label="Release Date">Release Date</th>
+      <th data-label="Materials">Materials</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Week">Week 1</td>
+      <td data-label="Topic">Sorting</td>
+      <td data-label="Release Date">March 17, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 01 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 01 - Answers.pdf">📋 Solution Key</a>
+        <a href="/static_files/exercises/Week 01 - Code.zip">💻 Code Files</a>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Week">Week 2</td>
+      <td data-label="Topic">Complexity Analysis of Algorithms</td>
+      <td data-label="Release Date">April 7, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 02 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 02 - Answers.pdf">📋 Solution Key</a>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Week">Week 2.5</td>
+      <td data-label="Topic">Complexity Analysis of Algorithms</td>
+      <td data-label="Release Date">April 21, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 2.5 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 2.5 - Answers.pdf">📋 Solution Key</a>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Week">Week 3</td>
+      <td data-label="Topic">Complexity Analysis &amp; Basic Data Structures &amp; Tree Storage and Traversal</td>
+      <td data-label="Release Date">April 21, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 03 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 03 - Answers.pdf">📋 Solution Key</a>
+        <a href="/static_files/exercises/Week 03 - Code.zip">💻 Code Files</a>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Week">Week 4</td>
+      <td data-label="Topic">Trees &amp; BST &amp; Trie &amp; Heap</td>
+      <td data-label="Release Date">May 5, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 04 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 04 - Answers.pdf">📋 Solution Key</a>
+        <a href="/static_files/exercises/Week 04 - Code.zip">💻 Code Files</a>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Week">Week 5</td>
+      <td data-label="Topic">Sorting Advanced</td>
+      <td data-label="Release Date">May 5, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 05 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 05 - Answers.pdf">📋 Solution Key</a>
+        <a href="/static_files/exercises/Week 05 - Code.zip">💻 Code Files</a>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Week">Week 6</td>
+      <td data-label="Topic">Disjoint Sets &amp; Binary Search and KSelect</td>
+      <td data-label="Release Date">May 12, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 06 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 06 - Answers.pdf">📋 Solution Key</a>
+        <a href="/static_files/exercises/Week 06 - Code.zip">💻 Code Files</a>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Week">Week 7</td>
+      <td data-label="Topic">Hashing</td>
+      <td data-label="Release Date">May 19, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 07 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 07 - Answers.pdf">📋 Solution Key</a>
+        <a href="/static_files/exercises/Week 07 - Code.zip">💻 Code Files</a>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Week">Week 8</td>
+      <td data-label="Topic">Hashing &amp; Graph Algorithms</td>
+      <td data-label="Release Date">May 26, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 08 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 08 - Answers.pdf">📋 Solution Key</a>
+        <a href="/static_files/exercises/Week 08 - Code.zip">💻 Code Files</a>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Week">Week 9</td>
+      <td data-label="Topic">Graph Algorithms &amp; Advanced Data Structures &amp; Balanced BSTs</td>
+      <td data-label="Release Date">June 3, 2026</td>
+      <td data-label="Materials" class="material-links">
+        <a href="/static_files/exercises/Week 09 - Questions.pdf">📄 Exercise Sheet</a>
+        <a href="/static_files/exercises/Week 09 - Answers.pdf">📋 Solution Key</a>
+        <a href="/static_files/exercises/Week 09 - Code.zip">💻 Code Files</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 <div class="exercise-card">
   <div class="exercise-header">
     <span class="week-badge">Week 1</span>

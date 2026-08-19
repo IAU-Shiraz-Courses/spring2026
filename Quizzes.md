@@ -262,6 +262,51 @@ permalink: /quizzes/
   <p>Here you can find all the quizzes for this course. Try to solve each quiz on your own before looking at the solution key — that's the best way to learn!</p>
 </div>
 
+<div class="table-scroll">
+<table class="data-table">
+  <thead>
+    <tr>
+      <th data-label="Quiz">Quiz</th>
+      <th data-label="Date">Release Date</th>
+      <th data-label="Question Sheet">Question Sheet</th>
+      <th data-label="Answer Key">Answer Key</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Quiz">Quiz 1</td>
+      <td data-label="Date">April 13, 2026</td>
+      <td data-label="Question Sheet" class="material-links"><a href="/static_files/Quizzes/Quiz 01 - Questions.pdf">📄 Quiz Sheet</a></td>
+      <td data-label="Answer Key" class="material-links"><a href="/static_files/Quizzes/Quiz 01 - Answers.pdf">📋 Solution Key</a></td>
+    </tr>
+    <tr>
+      <td data-label="Quiz">Quiz 2</td>
+      <td data-label="Date">April 27, 2026</td>
+      <td data-label="Question Sheet" class="material-links"><a href="/static_files/Quizzes/Quiz 02 - Questions.pdf">📄 Quiz Sheet</a></td>
+      <td data-label="Answer Key" class="material-links"><a href="/static_files/Quizzes/Quiz 02 - Answers.pdf">📋 Solution Key</a></td>
+    </tr>
+    <tr>
+      <td data-label="Quiz">Quiz 3</td>
+      <td data-label="Date">May 11, 2026</td>
+      <td data-label="Question Sheet" class="material-links"><a href="/static_files/Quizzes/Quiz 03 - Questions.pdf">📄 Quiz Sheet</a></td>
+      <td data-label="Answer Key" class="material-links"><a href="/static_files/Quizzes/Quiz 03 - Answers.pdf">📋 Solution Key</a></td>
+    </tr>
+    <tr>
+      <td data-label="Quiz">Quiz 4</td>
+      <td data-label="Date">May 25, 2026</td>
+      <td data-label="Question Sheet" class="material-links"><a href="/static_files/Quizzes/Quiz 04 - Questions.pdf">📄 Quiz Sheet</a></td>
+      <td data-label="Answer Key" class="material-links"><a href="/static_files/Quizzes/Quiz 04 - Answers.pdf">📋 Solution Key</a></td>
+    </tr>
+    <tr>
+      <td data-label="Quiz">Quiz 5 <span class="flag-tag">last chapter</span></td>
+      <td data-label="Date">June 1, 2026</td>
+      <td data-label="Question Sheet" class="material-links"><a href="/static_files/Quizzes/Quiz 05 - Questions.pdf">📄 Quiz Sheet</a></td>
+      <td data-label="Answer Key" class="material-links"><a href="/static_files/Quizzes/Quiz 05 - Answers.pdf">📋 Solution Key</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 <!-- Quiz 1 -->
 <div class="quiz-card">
   <div class="quiz-header">

@@ -367,13 +367,25 @@ permalink: /materials/
 
   <!-- ── Recommended Books ── -->
   <div class="section-title">📚 Recommended Books & References</div>
-  <div class="books-list">
-    <div class="book-item">
-      📗 <strong>"Data Structures & Algorithm Analysis"</strong> – Mark Allen Weiss
-    </div>
-    <div class="book-item">
-      📘 <strong>"Algorithms"</strong> – Robert Sedgewick & Kevin Wayne
-    </div>
+  <div class="table-scroll">
+  <table class="data-table books-table">
+    <thead>
+      <tr>
+        <th data-label="Book">Book</th>
+        <th data-label="Author">Author(s)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Book">📗 <strong>Data Structures &amp; Algorithm Analysis</strong></td>
+        <td data-label="Author">Mark Allen Weiss</td>
+      </tr>
+      <tr>
+        <td data-label="Book">📘 <strong>Algorithms</strong></td>
+        <td data-label="Author">Robert Sedgewick &amp; Kevin Wayne</td>
+      </tr>
+    </tbody>
+  </table>
   </div>
 
   <div class="judges-grid">

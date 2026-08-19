@@ -10,7 +10,7 @@ items:
   icon_class: fas fa-calendar-alt
 
 - url: /lectures/
-  name: lectures
+  name: Lectures
   icon_class: fas fa-book-reader
 
 - url: /exercises/
@@ -20,8 +20,11 @@ items:
 - url: /quizzes/
   name: Quizzes
   icon_class: fas fa-question-circle
-  
+
+- url: /project/
+  name: Project
+  icon_class: fas fa-rocket
+
 - url: /materials/
   name: Materials
   icon_class: fas fa-book
-
