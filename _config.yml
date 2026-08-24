@@ -1,6 +1,6 @@
 # Site settings
-course_name: "Data Structures and Algorithms "
-course_description: "This course covers fundamental data structures, algorithmic techniques, and their applications in solving computational problems. Topics include arrays, linked lists, stacks, queues, trees, graphs, hashing, and complexity analysis."
+course_name: "Data Analysis"
+course_description: "This course introduces the fundamentals of data analysis, covering data collection, cleaning, and exploratory analysis, statistical methods, data visualization, and practical tools such as Python, Pandas, and NumPy for extracting insights from real-world datasets."
 course_semester: "spring 2026"
 
 baseurl: "/spring2026"
