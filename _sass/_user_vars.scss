@@ -1,12 +1,10 @@
-// Cayman-inspired theme for DSA — Spring 2026
-// The whole palette is derived from the hero gradient:
-//   linear-gradient(120deg, #155799 0%, #159957 100%)
-$primary-color:  #159957;   // green — links, headings, table headers
-$accent-color:   #155799;   // blue — secondary accent (nav hover, borders)
-$title-color:    #159957;   // page titles
-$header-text-color: #ffffff;
-$header-color:   #155799;   // fallback header base (the gradient is applied in _header.scss)
-$header-background-opacity: 0;
+// theme #1
+ $primary-color:  #0077CC;
+ $accent-color: #f66733;
+ $title-color: #522d80;
+ $header-text-color: #fff;
+ $header-color: #336699;
+ $header-background-opacity: 0.5;
 
 // // theme #2
 // $primary-color:  #c3073f;
